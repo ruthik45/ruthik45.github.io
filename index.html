@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruthik | Cybersecurity & SOC Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #000000;
+            --bg-soft: #050505;
+            --bg-card: #0A0A0A;
+        }
+        /* New Professional Deep Charcoal Theme */
+        body.alt-theme {
+            --bg-main: #0D1117;
+            --bg-soft: #161B22;
+            --bg-card: #21262D;
+        }
+
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color: #ffffff; transition: background-color 0.4s ease; }
+        .accent-lime { color: #A3E635; }
+        .bg-lime { background-color: #A3E635; }
+        .hero-mask { background: linear-gradient(to right, var(--bg-main) 15%, transparent 100%); }
+        .card-dark { background-color: var(--bg-card); border: 1px solid rgba(255,255,255,0.05); }
+        .nav-blur { backdrop-filter: blur(15px); background: rgba(0,0,0,0.8); }
+        
+        #cert-modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 20px; }
+        #cert-modal.active { display: flex; }
+        
+        /* Toggle Switch Styles */
+        .toggle-dot { transition: all 0.3s ease; }
+        input:checked ~ .toggle-dot { transform: translateX(100%); background-color: #A3E635; }
+    </style>
+</head>
+<body>
+
+    <div id="cert-modal" onclick="closeModal()">
+        <div class="relative max-w-4xl w-full">
+            <button class="absolute -top-10 right-0 text-white font-bold uppercase text-xs tracking-widest">Close ✕</button>
+            <img id="modal-img" src="" class="w-full h-auto rounded-lg border border-white/10 shadow-2xl">
+        </div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+             
+                
+                <label for="theme-toggle" class="flex items-center cursor-pointer ml-4">
+                    <div class="relative">
+                        <input type="checkbox" id="theme-toggle" class="sr-only" onclick="toggleTheme()">
+                        <div class="block bg-white/10 w-10 h-6 rounded-full border border-white/10"></div>
+                        <div class="toggle-dot absolute left-1 top-1 bg-gray-400 w-4 h-4 rounded-full"></div>
+                    </div>
+                    <div class="ml-3 text-gray-400 text-[10px] font-bold uppercase tracking-widest">Theme</div>
+                </label>
+            </div>
+
+            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-[0.2em] font-medium text-gray-400">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#about" class="hover:text-white transition">Profile</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#education" class="hover:text-white transition">Education</a>
+                <a href="#certifications" class="hover:text-white transition">Certs</a>
+            </div>
+            <a href="mailto:aruthik740@gmail.com" class="bg-lime text-black px-6 py-2 rounded-sm text-xs font-bold uppercase tracking-widest hover:brightness-110 transition">Connect</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/me2.png" alt="Ruthik Profile" class="w-full h-full object-cover object-center opacity-75">
+            <div class="absolute inset-0 hero-mask"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+            <h4 class="accent-lime font-bold tracking-[0.4em] text-xs uppercase mb-4">Cybersecurity Analyst</h4>
+            <h1 class="text-6xl md:text-8xl font-light tracking-tighter mb-6 leading-none text-white">
+                Hi, I am <br><span class="font-bold uppercase">Ruthik.</span>
+            </h1>
+            <p class="text-gray-300 max-w-md text-lg mb-10 leading-relaxed">
+                Hands-on experience in threat detection, log analysis, and incident investigation using SIEM platforms.
+            </p>
+            <div class="flex space-x-4">
+                <a href="#about" class="border border-white/20 px-8 py-3 hover:bg-white hover:text-black transition uppercase text-xs font-bold tracking-widest">Personal Details</a>
+                <a href="#projects" class="bg-lime text-black px-8 py-3 font-bold uppercase text-xs tracking-widest hover:bg-white transition-colors">View SOC Labs</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 bg-[var(--bg-soft)]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20">
+                <div class="space-y-8">
+                    <h2 class="text-xs uppercase tracking-[0.4em] accent-lime font-bold">01 // Personal Details</h2>
+                    <div class="space-y-6">
+                        <div class="border-b border-white/5 pb-4">
+                            <span class="text-gray-500 text-xs uppercase block mb-1">Full Name</span>
+                            <span class="text-xl font-semibold">Ainaparru Ruthik</span>
+                        </div>
+                        <div class="border-b border-white/5 pb-4">
+                            <span class="text-gray-500 text-xs uppercase block mb-1">Contact</span>
+                            <a href="tel:+919390725880" class="text-xl font-semibold hover:text-lime transition">+91 9390725880</a>
+                        </div>
+                        <div class="border-b border-white/5 pb-4">
+                            <span class="text-gray-500 text-xs uppercase block mb-1">Email</span>
+                            <a href="mailto:aruthik740@gmail.com" class="text-xl font-semibold hover:text-lime transition">aruthik740@gmail.com</a>
+                        </div>
+                        <div class="flex space-x-6 pt-4">
+                            <a href="https://www.linkedin.com/in/ruthik-ainaparru-263a22301/" target="_blank" class="text-gray-400 hover:text-lime transition uppercase text-xs font-bold tracking-widest underline underline-offset-8">LinkedIn</a>
+                            <a href="https://github.com/ruthik45/" target="_blank" class="text-gray-400 hover:text-lime transition uppercase text-xs font-bold tracking-widest underline underline-offset-8">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-dark p-10 rounded-2xl border-l-4 border-l-lime">
+                    <h3 class="text-2xl font-light leading-relaxed text-gray-300 italic mb-8">
+                        "Skilled in monitoring security events, correlating logs, and identifying attack patterns aligned with MITRE ATT&CK."
+                    </h3>
+                    <div class="space-y-4">
+                        <h5 class="text-xs uppercase tracking-widest font-bold text-white">Technical Skills</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Splunk</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Nmap</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Sysmon</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Kali Linux</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Alert Investigation</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Incident Triage</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">MITRE ATT&CK Framework</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Network Traffic Analysis</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Ethical Hacking</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">VAPT</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Python</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Java</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Bash</span>
+                            <span class="bg-white/5 px-3 py-1 rounded text-xs">Log Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 bg-[var(--bg-main)] border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-[0.4em] accent-lime font-bold mb-16">02 // Key Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-dark p-8 rounded-xl hover:border-lime transition-all group">
+                    <h3 class="text-2xl font-bold mb-4">End-to-End SOC Detection Lab</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Built SOC lab using VirtualBox (Kali Linux, Windows). Simulated recon using Nmap, forwarded logs to Splunk, and created security event dashboards to investigate alerts and perform triage.
+                    </p>
+                    <span class="text-[10px] font-mono accent-lime uppercase tracking-widest">SIEM // Splunk // VirtualBox</span>
+                </div>
+                <div class="card-dark p-8 rounded-xl hover:border-lime transition-all group">
+                    <h3 class="text-2xl font-bold mb-4">DDoS Detection via ML</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Built 1D-CNN model for DDoS detection using network traffic data. Extracted features using CICFlow Meter and evaluated performance using accuracy and detection metrics.
+                    </p>
+                    <span class="text-[10px] font-mono accent-lime uppercase tracking-widest">Machine Learning // CNN // Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-32 bg-[var(--bg-soft)]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-[0.4em] accent-lime font-bold mb-16 text-center">03 // Academic Profile</h2>
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-8 border border-white/5 bg-[var(--bg-card)] rounded-xl">
+                    <div>
+                        <h4 class="text-xl font-bold">Malla Reddy Institute of Technology</h4>
+                        <p class="text-gray-400">B.Tech in Computer Science Engineering</p>
+                    </div>
+                    <div class="text-right mt-4 md:mt-0">
+                        <span class="text-lime font-mono text-lg block">GPA: 7.1/10</span>
+                        <span class="text-gray-500 text-xs">Aug 2022 - Present</span>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-8 border border-white/5 bg-[var(--bg-card)] rounded-xl opacity-70">
+                    <div>
+                        <h4 class="text-xl font-bold">Sri Chaitanya Junior College</h4>
+                        <p class="text-gray-400">Intermediate (MPC)</p>
+                    </div>
+                    <div class="text-right mt-4 md:mt-0">
+                        <span class="text-white/60 font-mono text-lg block">GPA: 6.5/10</span>
+                        <span class="text-gray-500 text-xs">2020 - 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-32 bg-[var(--bg-main)] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-[0.4em] accent-lime font-bold mb-16 text-center">04 // Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div onclick="openModal('assets/images/cert.png')" class="p-8 border border-white/5 bg-[var(--bg-card)] hover:bg-lime hover:text-black transition-all group cursor-pointer">
+                    <h5 class="font-bold text-lg mb-2">IIT Kanpur</h5>
+                    <p class="text-xs opacity-60 uppercase tracking-widest">Cyber Security (C3i Center)</p>
+                    <span class="inline-block mt-6 text-[10px] font-bold uppercase tracking-widest">Click to View →</span>
+                </div>
+                <div onclick="openModal('assets/images/cert2.png')" class="p-8 border border-white/5 bg-[var(--bg-card)] hover:bg-lime hover:text-black transition-all group cursor-pointer">
+                    <h5 class="font-bold text-lg mb-2">Simplilearn</h5>
+                    <p class="text-xs opacity-60 uppercase tracking-widest">Infrastructure Security</p>
+                    <span class="inline-block mt-6 text-[10px] font-bold uppercase tracking-widest">Click to View →</span>
+                </div>
+                <div onclick="openModal('assets/images/network.png')" class="p-8 border border-white/5 bg-[var(--bg-card)] hover:bg-lime hover:text-black transition-all group cursor-pointer">
+                    <h5 class="font-bold text-lg mb-2">Networking</h5>
+                    <p class="text-xs opacity-60 uppercase tracking-widest">Fundamentals & Security</p>
+                    <span class="inline-block mt-6 text-[10px] font-bold uppercase tracking-widest">Click to View →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center bg-[var(--bg-soft)]">
+        <p class="text-gray-600 text-[10px] tracking-[0.5em] uppercase">&copy; 2026 RUTHIK AINAPARRU // SOC ANALYST</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('alt-theme');
+        }
+
+        function openModal(imgSrc) {
+            document.getElementById('modal-img').src = imgSrc;
+            document.getElementById('cert-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('cert-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
